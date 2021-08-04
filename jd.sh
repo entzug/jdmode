@@ -154,9 +154,9 @@ function author_raws(){
 
 function cronlist_a(){
     # 添加基础仓库任务,替换运行命令为 cknode
-    grep -oE "(^[^#].*\ node\ .*\.js|^#[^\>]*)" /jd/scripts/docker/crontab_list.sh | sed "s/\ node\ \/scripts/\ cknode 1@all\ \/jd\/scripts/g" >/jd/config/cronlist
+    # grep -oE "(^[^#].*\ node\ .*\.js|^#[^\>]*)" /jd/scripts/docker/crontab_list.sh | sed "s/\ node\ \/scripts/\ cknode 1@all\ \/jd\/scripts/g" >/jd/config/cronlist
     # 添加仓库作者 cdle 任务
-    cat <<'EOF' >>/jd/config/cronlist
+    cat <<'EOF' >/jd/config/cronlist
 0 0 * * * cknode 1@all /jd/scripts/jd_cdle_angryBean.js
 0 0 * * * cknode 1@all /jd/scripts/jd_cdle_earn30.js
 0 0 * * * cknode 1@all /jd/scripts/jd_cdle_dyj.js
