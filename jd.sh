@@ -162,7 +162,7 @@ function cronlist_a(){
 0 0 * * * cknode 1@all /jd/scripts/jd_cdle_dyj.js
 0 0 * * * cknode 1@all /jd/scripts/jd_cdle_angryCash.js
 0 0 * * * cknode 1@all /jd/scripts/jd_cdle_angryKoi.js
-0 0 * * * cknode 1@all /jd/scripts/jd_cdle_cash_exchange.js
+0 0 * * 6,0,1,2 cknode 1@all /jd/scripts/jd_cdle_cash_exchange.js
 EOF
     # 添加默认任务
     cat <<'EOF' >>/jd/config/cronlist
